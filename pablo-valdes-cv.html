@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pablo Antonio Valdés Gallardo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #0b3d91;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    .button-group {
+      margin: 1rem 0;
+    }
+    .button-group button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #0b3d91;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button-group button:hover {
+      background-color: #094089;
+    }
+    .badges img {
+      height: 60px;
+      margin: 5px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pablo Antonio Valdés Gallardo</h1>
+    <p>Diseñador Gráfico | Especialista TI | Estudiante de Ingeniería Informática</p>
+  </header>
+  <main>
+    <section>
+      <h2>Perfil Profesional</h2>
+      <p>Soy un profesional con más de 8 años de experiencia en diseño gráfico y tecnología de la información (TI), con una discapacidad auditiva que no limita mi capacidad para comunicarme eficazmente. Me especializo en ofrecer soluciones que optimizan procesos y mejoran la comunicación en las empresas.</p>
+    </section>
+
+    <section>
+      <h2>Educación</h2>
+      <ul>
+        <li>Lic. en Ingeniería Informática – Universidad del Caribe (en curso)</li>
+        <li>Especialista IT – Universidad Politécnica Internacional de Panamá (2021)</li>
+        <li>Diseño Gráfico y Ciencias Computacionales – Mt. Aloysius College (1998 - 2002)</li>
+        <li>Bachiller en Ciencias – Escuela El Buen Pastor Nocturna (2004)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Habilidades Técnicas</h2>
+      <ul>
+        <li>Illustrator, Photoshop, Corel Draw</li>
+        <li>Microsoft Office, Soporte TI</li>
+        <li>Lengua de señas</li>
+        <li>Inglés hablado y escrito</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experiencia Laboral</h2>
+      <p><strong>McKinsey & Company</strong> – Asistente Administrativo IT (2023)</p>
+      <ul>
+        <li>Atención a clientes internos y soporte de infraestructura</li>
+        <li>Reimagen de laptops, inventario, cableado estructurado</li>
+      </ul>
+
+      <p><strong>Ministerio de Trabajo</strong> – Oficinista</p>
+      <ul>
+        <li>Desarrollo de bases de datos, intérprete en lengua de señas</li>
+      </ul>
+
+      <p><strong>Arias, Alemán & Mora</strong> – Asistente de Informática</p>
+      <ul>
+        <li>Instalación y reparación de equipos, asistencia a usuarios</li>
+      </ul>
+
+      <p><strong>Central Hotel Panamá</strong> – Asistente de Sistemas</p>
+      <ul>
+        <li>Cableado estructurado, software de control de accesos</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certificaciones y Cursos</h2>
+      <div class="button-group">
+        <button onclick="toggleSection('badges')">Ver Badges</button>
+        <button onclick="toggleSection('cursos')">Ver Cursos</button>
+        <button onclick="toggleSection('contacto')">Ver Contacto</button>
+      </div>
+      <div id="badges" class="hidden badges">
+        <img src="https://www.netacad.com/sites/default/files/inline-images/Badge-Introduction-to-Cybersecurity.png" alt="Intro Cybersecurity">
+        <img src="https://www.netacad.com/sites/default/files/inline-images/Badge-CyberThreatManagement.png" alt="Cyber Threat Management">
+        <img src="https://www.netacad.com/sites/default/files/inline-images/Badge-Introduction-to-Data-Science.png" alt="Data Science">
+        <img src="https://www.netacad.com/sites/default/files/inline-images/Badge-PythonEssentials2.png" alt="Python Essentials 2">
+        <img src="https://images.credly.com/size/680x680/images/44e79b6e-d28c-4a89-9aad-13b4d7a4b1bc/Developer_Skills_Network.png" alt="IBM Developer Skills">
+      </div>
+
+      <div id="cursos" class="hidden">
+        <ul>
+          <li>Agile Fundamentals, Jira Essentials, AWS Advanced Networking</li>
+          <li>Python Essentials 2, Ethical Hacking, Help Desk Professional</li>
+          <li>CCNA 200-301, ISO 27001, Active Directory</li>
+          <li>DevOps, SOC, Data Science, Cybersecurity Careers</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto" class="hidden">
+      <h2>Contacto</h2>
+      <p>Email: pvaldes.discapacidad@gmail.com</p>
+      <p>Teléfono: +507 6399-5372</p>
+      <p>Ubicación: Loma de San Cristóbal, Nuevo Veranillo, San Miguelito, Panamá</p>
+    </section>
+  </main>
+  <footer style="text-align: center; padding: 1rem; color: #666;">
+    © 2025 Pablo Antonio Valdés Gallardo
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
