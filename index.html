@@ -29,11 +29,20 @@
         h1, h2 {
             color: #007acc;
         }
-        section {
-            margin-bottom: 2rem;
+        button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
         }
-        ul {
-            padding-left: 1.2rem;
+        button:hover {
+            background-color: #005f99;
+        }
+        .hidden {
+            display: none;
         }
         footer {
             text-align: center;
@@ -42,59 +51,104 @@
             font-size: 0.9em;
             color: #777;
         }
+        ul {
+            line-height: 1.6;
+        }
+        .badge {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        .badge img {
+            width: 120px;
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Pablo Antonio Valdés Gallardo</h1>
-        <p>Diseñador Gráfico | Especialista TI</p>
+        <p>Diseñador Gráfico | Especialista TI | Estudiante de Ingeniería Informática</p>
     </header>
     <main>
-        <section>
-            <h2>Perfil Profesional</h2>
-            <p>Soy un profesional con más de 8 años de experiencia en diseño gráfico y tecnología de la información (TI), con una discapacidad auditiva que no limita mi capacidad para comunicarme eficazmente. Me especializo en ofrecer soluciones que optimizan procesos y mejoran la comunicación en las empresas. Trabajo bien en equipos multidisciplinarios y en entornos inclusivos y dinámicos.</p>
-        </section>
+        <h2>Sobre mí</h2>
+        <p>Soy un profesional con más de 8 años de experiencia en diseño gráfico y tecnología de la información (TI), con una discapacidad auditiva que no limita mi capacidad para comunicarme eficazmente. Mi habilidad para adaptar la comunicación verbal y no verbal me permite trabajar de manera colaborativa en equipos multidisciplinarios.</p>
 
-        <section>
-            <h2>Educación</h2>
+        <h2>Experiencia Profesional</h2>
+        <ul>
+            <li><strong>McKinsey & Company</strong>: Organización y rotulación de cableado estructurado en el Data Center.</li>
+            <li><strong>MITRADEL</strong>: Técnico en Lengua de Señas, diseño gráfico y manejo de base de datos.</li>
+            <li><strong>Arias, Alemán & Mora</strong>: Asistente de Informática (mantenimiento, soporte, pagos electrónicos).</li>
+            <li><strong>Central Hotel Panamá</strong>: Asistente de Sistemas, cableado estructurado y software de control de accesos.</li>
+        </ul>
+
+        <button onclick="toggleSection('cursos')">📚 Ver Cursos y Certificaciones</button>
+        <div id="cursos" class="hidden">
+            <h2>Cursos y Certificaciones</h2>
             <ul>
-                <li>Licenciatura en Ingeniería Informática - Universidad del Caribe (En curso)</li>
-                <li>Especialista IT - Universidad Politécnica Internacional de Panamá (2021)</li>
-                <li>Diseño Gráfico y Ciencias Computacionales - Mt. Aloysius College (1998–2002)</li>
-                <li>Bachiller en Ciencias - Escuela El Buen Pastor Nocturna (2004)</li>
+                <li>✅ Cisco: Python Essentials, Introducción a la Ciberseguridad, Gestión de Amenazas, Data Science</li>
+                <li>🎓 Coursera: DevOps, Agile, Cybersecurity Careers, Seguridad Informática, Introducción a la Programación</li>
+                <li>🌐 Udemy:
+                    <ul>
+                        <li>Agile Fundamentals, Scrum y Kanban</li>
+                        <li>Especialización en gestión de proyectos</li>
+                        <li>Configuración de switches Cisco</li>
+                        <li>Help Desk y Troubleshooting</li>
+                        <li>Active Directory, ISO/IEC 27001</li>
+                        <li>Ethical Hacking con Metasploit</li>
+                        <li>Jira Essentials</li>
+                    </ul>
+                </li>
+                <li>💻 New Horizons: HTML & CSS3, SQL, AJAX</li>
+                <li>☁️ AWS Skilling Panamá: Fundamentos de Nube, IA Generativa, Innovación en Educación</li>
+                <li>🏛 McKinsey: Workplace Ethics, Dignity and Respect</li>
+                <li>📚 Harvard Managementor: Gestión del Tiempo</li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2>Experiencia Laboral</h2>
-            <ul>
-                <li><strong>McKinsey & Company</strong> – Administrative Assistant IT (2023)<br>
-                    Cableado estructurado, soporte de red, resolución de problemas, metodología ágil, inventario.
-                </li>
-                <li><strong>Ministerio de Trabajo y Desarrollo Laboral</strong> – Oficinista<br>
-                    Intérprete en lengua de señas, base de datos, asistencia a personas con discapacidad.
-                </li>
-                <li><strong>Arias, Alemán & Mora</strong> – Asistente de Informática<br>
-                    Soporte técnico, mantenimiento de computadoras, impresoras, pagos institucionales.
-                </li>
-                <li><strong>Central Hotel</strong> – Asistente de Sistemas<br>
-                    Soporte IT, cableado, software de acceso, mantenimiento de PCs e impresoras.
-                </li>
-            </ul>
-        </section>
+        <button onclick="toggleSection('badges')">🎖️ Ver Badges Obtenidos</button>
+        <div id="badges" class="hidden">
+            <h2>Mis Badges</h2>
+            <div class="badge">
+                <img src="https://img.icons8.com/color/144/000000/cyber-security.png" alt="Cybersecurity">
+                <p>Introduction to Cybersecurity</p>
+            </div>
+            <div class="badge">
+                <img src="https://img.icons8.com/color/144/000000/firewall.png" alt="Threat Management">
+                <p>Cyber Threat Management</p>
+            </div>
+            <div class="badge">
+                <img src="https://img.icons8.com/color/144/000000/artificial-intelligence.png" alt="Data Science">
+                <p>Introduction to Data Science</p>
+            </div>
+            <div class="badge">
+                <img src="https://img.icons8.com/color/144/000000/python.png" alt="Python Essentials">
+                <p>Python Essentials 2</p>
+            </div>
+            <div class="badge">
+                <img src="https://img.icons8.com/color/144/000000/ibm.png" alt="IBM Developer Skills">
+                <p>IBM Developer Skills Network</p>
+            </div>
+        </div>
 
-        <section>
-            <h2>Habilidades Técnicas</h2>
-            <ul>
-                <li>Diseño: Illustrator, Photoshop, CorelDraw</li>
-                <li>Ofimática: Microsoft Office</li>
-                <li>Redes y Soporte: IT Support, Networking, Reimagen de SO, Diagnóstico</li>
-                <li>Lenguaje de señas</li>
-            </ul>
-        </section>
+        <button onclick="toggleSection('contacto')">📞 Ver Información de Contacto</button>
+        <div id="contacto" class="hidden">
+            <h2>Contacto</h2>
+            <p><strong>Teléfono:</strong> +507 6399-5372</p>
+            <p><strong>Email:</strong> pvaldes.discapacidad@gmail.com</p>
+            <p><strong>Ubicación:</strong> Loma de San Cristóbal, Nuevo Veranillo, San Miguelito</p>
+        </div>
+    </main>
+    <footer>
+        © 2025 Pablo Antonio Valdés Gallardo
+    </footer>
 
-        <section>
-            <h2>Idiomas</h2>
-            <ul>
-                <li>Español: Nativo</li>
-                <li>Inglés: Intermedio (hablado y escrito)</li>
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
